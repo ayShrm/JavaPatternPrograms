@@ -1,0 +1,29 @@
+package com.ayush;
+
+public class BinarySum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		long binary1 = 011011, binary2 = 1010111;
+		int sum[] = new int[50];
+		int i = 0, remainder = 0;
+		while (binary1 != 0 || binary2 != 0) {
+			sum[i++] = (int) ((binary1 % 10 + binary2 % 10 + remainder) % 2);
+			remainder = (int) ((binary1 % 10 + binary2 % 10 + remainder) / 2);
+			binary1 = binary1 / 10;
+			binary2 = binary2 / 10;
+		}
+
+		if (remainder != 0) {
+			sum[i] = remainder;
+		}
+
+		// Display the sum of the two binary numbers
+		System.out.print("Sum of two binary numbers: ");
+		while (i >= 0) {
+			System.out.print(sum[i--]);
+		}
+	}
+
+}

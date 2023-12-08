@@ -1,0 +1,25 @@
+package com.ayush.basics;
+
+import java.util.Scanner;
+
+public class SquarePattern {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("***Print the Square Pattern***");
+		System.out.println("Enter the number of rows: ");
+		System.out.println("Enter the number of columns: ");
+		for (int i=1; i<=row; i++) {
+			for(int j=1; j<=column; j++) {
+				System.out.print("* ");
+			}
+		}
+		
+		sc.close();
+	}
+	
+
+}
